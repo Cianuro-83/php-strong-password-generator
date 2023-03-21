@@ -1,24 +1,26 @@
 <?php
-var_dump($_GET);
+// var_dump($_GET);
 $psw_lenght=((int)$_GET['psw_lenght']);
-var_dump($psw_lenght);
+// var_dump($psw_lenght);
 
 $caratteri=[
     "QWERTYUIOPèASDFGHJKLZXCVBNM",
     "qwertyuiopasdfghjklzxcvbnm",
     "123456789",
-    "/*-+<>òç@#ù§ìé",
+    "*!£$%&/=?",
 ];
 
-$psw="";
+$password=genera_psw($psw_lenght, $caratteri);
+// var_dump($psw);
+
 
 function genera_psw($psw_lenght, $caratteri){
-for ($i=0; $i < 10; $i++){
+for ($i=0; $i < $psw_lenght; $i++){
     $casual_number =rand(0,3);
     $last_index= strlen($caratteri[$casual_number])-1;
-    $psw .= $caratteri[$casual_number][rand(0,$last_index)]
-    // var_dump($psw);
-}
+    $psw.= $caratteri[$casual_number][rand(0,$last_index)];
+};
+return $psw;
 };
 
 ?>
@@ -57,6 +59,9 @@ for ($i=0; $i < 10; $i++){
                 </div>
             </div>
         </form>
+    </div>
+    <div class="container">
+        <h2><?php echo $password?></h2>
     </div>
 </body>
 
