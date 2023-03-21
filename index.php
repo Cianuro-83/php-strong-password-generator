@@ -2,33 +2,12 @@
 // var_dump($_GET);
 $psw_lenght=((int)$_GET['psw_lenght']);
 // var_dump($psw_lenght);
+require_once __DIR__ . "/function.php";
 
-$caratteri=[
-    "QWERTYUIOPèASDFGHJKLZXCVBNM",
-    "qwertyuiopasdfghjklzxcvbnm",
-    "123456789",
-    "*!£$%&/=?",
-];
 
-$password=genera_psw($psw_lenght, $caratteri);
+$password=genera_psw($psw_lenght);
 // var_dump($psw);
-
-
-function genera_psw($psw_lenght, $caratteri){
-for ($i=0; $i < $psw_lenght; $i++){
-    $casual_number =rand(0,3);
-    $last_index= strlen($caratteri[$casual_number])-1;
-    $psw.= $caratteri[$casual_number][rand(0,$last_index)];
-};
-return $psw;
-};
-
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +40,8 @@ return $psw;
         </form>
     </div>
     <div class="container">
-        <h2><?php echo $password?></h2>
+        <h2>La password generata dal sistema è:</h2>
+        <h3 class="text-danger text-center"><?php echo $password?></h3>
     </div>
 </body>
 
