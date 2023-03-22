@@ -26,18 +26,53 @@ require_once __DIR__ . "/function.php";
     <div class="container py-5">
         <h1 class="text-center text-capitalize text-warning"> strong password generator</h1>
         <h2 class="text-info text-center py-3">Genera una password sicura</h2>
-        <form action="./result.php" method="GET">
-            <div class="col-12 d-flex">
-                <div class="col-3 ms-auto">
-                    <input type="number" class="form-control" name="psw_lenght" id="staticEmail"
-                        placeholder="Lunghezza della password">
+        <div class="container scb-container">
+            <form action="./result.php" method="GET">
+                <div class="col-12 d-flex align-items-center">
+                    <div class="col-6">Digita il numero di caratteri che devono comporre la tua password</div>
+                    <div class="col-6"> <input type="number" class="form-control" name="psw_lenght" id="staticEmail"
+                            placeholder="Lunghezza della password"></div>
+
                 </div>
-                <div class="col-3 ms-2">
-                    <button type="submit" class="btn btn-primary mb-3 text-uppercase">genera password di lunghezza
-                        diversa</button>
+
+
+                <div class="col-12 d-flex  py-5">
+                    <div class="col-3 ms-auto">
+                        <h3>Quali caratteristiche deve avere la tua password?</h3>
+                        <p class="text-danger py-4">Ricorda che più caratteristiche usi, maggiore sarà il grado di
+                            protezione
+                        </p>
+                    </div>
+                    <div class="col-3 ms-auto py-4">
+
+                        <div class="form-check">
+                            <input class="form-check-input" name="lettere" type="checkbox" value=""
+                                id="flexCheckChecked1" checked>
+                            <label class="form-check-label" for="flexCheckChecked1">
+                                Lettere
+                            </label>
+                        </div>
+                        <div class="form-check py-3">
+                            <input class="form-check-input" name="numeri" type="checkbox" value=""
+                                id="flexCheckChecked2" checked>
+                            <label class="form-check-label" for="flexCheckChecked2">
+                                Numeri
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input " name="simboli" type="checkbox" value=""
+                                id="flexCheckChecked3" checked>
+                            <label class="form-check-label" for="flexCheckChecked3">
+                                Simboli
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="col-12 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mb-3 text-uppercase">genera password </button>
+                </div>
+            </form>
+        </div>
     </div>
 
 </body>

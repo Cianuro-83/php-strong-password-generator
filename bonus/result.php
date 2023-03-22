@@ -34,8 +34,9 @@ $_SESSION ["password"] = $password;
         </h3>
         <form action="./index.php" method="GET">
 
-            <div class="col-3 ms-2">
-                <button type="submit" class="btn btn-primary mb-3 text-uppercase">genera nuova password</button>
+            <div class="col-12 d-flex justify-content-center py-5">
+                <button type="submit" class="btn btn-primary mb-3 text-uppercase">Modifica caratteristiche
+                    password</button>
             </div>
     </div>
     </form>

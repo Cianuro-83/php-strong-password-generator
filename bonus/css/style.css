@@ -5,3 +5,8 @@ body {
   color: white;
   background-color: rgb(3, 49, 3);
 }
+
+.scb-container {
+  border: 2px solid black;
+  background-color: aqua;
+}
