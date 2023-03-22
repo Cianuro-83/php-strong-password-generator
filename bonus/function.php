@@ -2,13 +2,13 @@
 // var_dump($_GET);
 function genera_psw($psw_lenght){
     $caratteri=[
-        "QWERTYUIOPèASDFGHJKLZXCVBNM",
+        "QWERTYUIOPASDFGHJKLZXCVBNM",
         "qwertyuiopasdfghjklzxcvbnm",
         "1234567890",
-        "!£%&/*-+=",
+        "!$%&*-+=",
     ];
     $caratteri_2=[
-        "QWERTYUIOPèASDFGHJKLZXCVBNM",
+        "QWERTYUIOPASDFGHJKLZXCVBNM",
         "qwertyuiopasdfghjklzxcvbnm",
         "!£%&/*-+=",
     ];

@@ -27,11 +27,11 @@ require_once __DIR__ . "/function.php";
         <h1 class="text-center text-capitalize text-warning"> strong password generator</h1>
         <h2 class="text-info text-center py-3">Genera una password sicura</h2>
         <div class="container scb-container">
-            <form action="./result.php" method="GET">
+            <form class="py-3" action="./result.php" method="GET">
                 <div class="col-12 d-flex align-items-center">
                     <div class="col-6">Digita il numero di caratteri che devono comporre la tua password</div>
                     <div class="col-6"> <input type="number" class="form-control" name="psw_lenght" id="staticEmail"
-                            placeholder="Lunghezza della password"></div>
+                            placeholder="Lunghezza della password" min="6" max="32"></div>
 
                 </div>
 
